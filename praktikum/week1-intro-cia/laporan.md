@@ -1,34 +1,36 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 1  
+Topik: Sejarah Kriptografi dan Prinsip CIA  
+Nama: Ibnu Sahrul Anwar  
+NIM: 230202811  
+Kelas: 5IKKA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+1. Menjelaskan sejarah dan evolusi kriptografi dari masa klasik hingga modern.
+2. Menyebutkan prinsip Confidentiality, Integrity, Availability (CIA) dengan benar.
+3. Menyimpulkan peran kriptografi dalam sistem keamanan informasi modern
+4. Menyiapkan repositori GitHub sebagai media kerja praktikum.
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+**Sejarah Kriptografi**
+Kriptografi adalah ilmu yang digunakan untuk menjaga kerahasiaan informasi. Pada era klasik, metode enkripsi masih sederhana, seperti Caesar Cipher yang mengganti huruf dengan pergeseran alfabet, dan Vigenère Cipher yang memakai kunci berupa kata. Meski efektif pada masanya, metode ini mudah dipecahkan. Memasuki era modern, muncul algoritma yang lebih kuat seperti RSA yang berbasis kunci publik dan AES yang menggunakan enkripsi simetris. Keduanya banyak dipakai pada transaksi online, komunikasi aman, dan sistem keamanan jaringan. Kini, kriptografi berkembang lebih jauh melalui teknologi blockchain dan cryptocurrency, seperti Bitcoin, yang mengandalkan hash dan tanda tangan digital untuk menjaga integritas serta kepercayaan data secara terdistribusi.
+
+**Prinsip CIA**
+Keamanan informasi bertumpu pada tiga pilar utama yang dikenal sebagai CIA Triad. Pertama, Confidentiality atau kerahasiaan, memastikan data hanya dapat diakses oleh pihak berwenang. Sebagai contoh, password disimpan dalam bentuk hash terenkripsi sehingga tidak bisa dibaca langsung. Kedua, Integrity atau integritas, menjamin bahwa data tidak diubah secara tidak sah, misalnya melalui verifikasi checksum saat mengunduh aplikasi. Ketiga, Availability atau ketersediaan, memastikan data dan layanan selalu dapat digunakan. Sebagai contoh, bank menyediakan server cadangan agar layanan mobile banking tetap berfungsi meskipun terjadi gangguan sistem.
 
 ---
 
 ## 3. Alat dan Bahan
 (- Python 3.x  
-- Visual Studio Code / editor lain  
+- Visual Studio Code
 - Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
-
 ---
 
 ## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
 1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
 2. Menyalin kode program dari panduan praktikum.
 3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
@@ -64,10 +66,22 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+1.	Tokoh yang dianggap sebagai bapak kriptografi modern
+    Claude Shannon. Ia dikenal sebagai "Bapak Teori Informasi" dan salah satu pendiri kriptografi modern melalui karyanya        Communication Theory of Secrecy Systems (1949), yang memberikan dasar matematis bagi keamanan enkripsi.
+2.	Algoritma kunci publik yang populer digunakan saat ini
+    - RSA (Rivest–Shamir–Adleman)
+    - ECC (Elliptic Curve Cryptography)
+    - DSA (Digital Signature Algorithm, sering dipakai untuk tanda tangan digital)
+3.	Perbedaan utama antara kriptografi klasik dan modern
+	Kriptografi klasik: 
+	- Menggunakan operasi sederhana (pergeseran huruf, substitusi, transposisi).
+	- Umumnya berbasis teks alfabet.
+	- Mudah dipecahkan dengan analisis frekuensi.
+	Kriptografi modern:
+	- Berbasis matematika kompleks (teori bilangan, logaritma diskrit, kurva eliptik).
+	- Beroperasi pada data biner (bit/byte).
+	- Dirancang untuk keamanan tinggi di dunia digital (internet, transaksi online).
+
 ---
 
 ## 8. Kesimpulan
@@ -76,19 +90,15 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
 
 ---
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
 ```
 commit abc12345
-Author: Nama Mahasiswa <email>
+Author: Ibnu Sahrul Anwar <benuibnuanwar@gmail.com>
 Date:   2025-09-20
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
