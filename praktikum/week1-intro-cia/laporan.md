@@ -31,36 +31,75 @@ Keamanan informasi bertumpu pada tiga pilar utama yang dikenal sebagai CIA Triad
 ---
 
 ## 4. Langkah Percobaan
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
+1. Membuat file `hello_world.py` di folder `praktikum/week1-intro-cia/src/`.
 2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+3. Menjalankan program dengan perintah `python hello_world.py`.)
 
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+# ================================================
+# File: hello_world.py
+# Program Pengenalan Kriptografi - Caesar Cipher
+# ================================================
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+# Fungsi Enkripsi Caesar Cipher
+def caesar_encrypt(text, shift):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            start = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - start + shift) % 26 + start)
+        else:
+            result += char
+    return result
+
+# Fungsi Dekripsi Caesar Cipher
+def caesar_decrypt(text, shift):
+    return caesar_encrypt(text, -shift)
+
+# ===============================
+# Program Utama (Main Program)
+# ===============================
+print("===========================================")
+print("     HELLO WORLD - PROGRAM KRIPTOGRAFI")
+print("             CAESAR CIPHER")
+print("===========================================")
+print("Program ini mengenkripsi dan mendekripsi teks sederhana.")
+print("Teknik yang digunakan adalah Caesar Cipher.\n")
+
+# Input dari pengguna
+pesan = input("Masukkan pesan (contoh: Hello World): ")
+geser = int(input("Masukkan jumlah pergeseran (contoh: 3): "))
+
+# Proses Enkripsi
+pesan_terenkripsi = caesar_encrypt(pesan, geser)
+print("\n=== HASIL ENKRIPSI ===")
+print("Pesan asli       :", pesan)
+print("Pesan terenkripsi:", pesan_terenkripsi)
+
+# Proses Dekripsi
+pesan_didekripsi = caesar_decrypt(pesan_terenkripsi, geser)
+print("\n=== HASIL DEKRIPSI ===")
+print("Pesan setelah didekripsi:", pesan_didekripsi)
+
+print("\nTerima kasih! Anda baru saja menjalankan program Hello World versi Kriptografi 🎉")
 
 ---
 
 ## 6. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+- Berikan tabel atau ringkasan hasil uji jika diperlukan.
+  
+- Jelaskan apakah hasil sesuai ekspektasi.
+  - Tidak sepenuhnya — karena saat pertama dijalankan Python mengembalikan error file not found → ini tidak sesuai ekspektasi (kita mengharapkan program berjalan).
+  - Error kedua (pytho) adalah kesalahan pengetikan, juga tidak sesuai harapan.
+  - Setelah memastikan file benar di folder yang aktif (cd src) dan menjalankan python hello_world.py, hasil akan sesuai ekspektasi: program meminta input, menampilkan pesan terenkripsi, lalu mendekripsinya kembali.
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+![Hasil Eksekusi](C:\Users\LENOVO\OneDrive\画像\Screenshots\Screenshot 2025-10-12 220413.jpg)
+![Hasil Input dan Output](C:\Users\LENOVO\OneDrive\画像\Screenshots\Screenshot 2025-10-12 220436.jpg)
 )
 
 ---
@@ -85,13 +124,17 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Hasil pengujian program hello_world.py (Caesar Cipher) menunjukkan bahwa:
+- Program berfungsi sesuai ekspektasi setelah dijalankan dari folder yang benar (src) dan menggunakan perintah yang tepat (python hello_world.py).
+- Error awal terjadi karena file belum berada di direktori kerja serta adanya typo perintah (pytho), bukan karena kesalahan kode.
+- Setelah diperbaiki, program berhasil menampilkan proses enkripsi dan dekripsi teks dengan benar.
+Kesimpulan akhir:
+Program Caesar Cipher berjalan berhasil dan sesuai tujuan, menunjukkan cara kerja dasar kriptografi klasik melalui pergeseran huruf secara sederhana.
 
 ---
 
 ## 9. Daftar Pustaka
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+- Youtube dan AI
 
 ---
 
