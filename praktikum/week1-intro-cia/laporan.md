@@ -90,17 +90,19 @@ print("\nTerima kasih! Anda baru saja menjalankan program Hello World versi Krip
 ## 6. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.
-  
+  [Tabel 1.docx](https://github.com/user-attachments/files/22885397/Tabel.1.docx)
+
 - Jelaskan apakah hasil sesuai ekspektasi.
   - Tidak sepenuhnya — karena saat pertama dijalankan Python mengembalikan error file not found → ini tidak sesuai ekspektasi (kita mengharapkan program berjalan).
   - Error kedua (pytho) adalah kesalahan pengetikan, juga tidak sesuai harapan.
   - Setelah memastikan file benar di folder yang aktif (cd src) dan menjalankan python hello_world.py, hasil akan sesuai ekspektasi: program meminta input, menampilkan pesan terenkripsi, lalu mendekripsinya kembali.
 
 Hasil eksekusi program Caesar Cipher:
+[Hasil Eksekusi]
+<img width="1920" height="1080" alt="Screenshot 2025-10-12 220413" src="https://github.com/user-attachments/assets/1bcafe27-c4bb-4116-b951-f1585974bc65" />
 
-![Hasil Eksekusi](C:\Users\LENOVO\OneDrive\画像\Screenshots\Screenshot 2025-10-12 220413.jpg)
-![Hasil Input dan Output](C:\Users\LENOVO\OneDrive\画像\Screenshots\Screenshot 2025-10-12 220436.jpg)
-)
+[Hasil Input dan Output]
+<img width="1920" height="1080" alt="Screenshot 2025-10-12 220436" src="https://github.com/user-attachments/assets/394f6ead-c7e6-48d5-8adc-b8d2273c1e20" />
 
 ---
 
