@@ -15,12 +15,17 @@ Kelas: 5IKKA
 ---
 
 ## 2. Dasar Teori
-Dalam kriptografi, cipher klasik merupakan metode penyandian pesan yang menggunakan transformasi sederhana terhadap huruf atau angka berdasarkan aturan tertentu. Dua jenis cipher klasik yang paling dikenal adalah substitusi (misalnya Caesar Cipher) dan transposisi (misalnya Rail Fence Cipher). Pada substitusi, setiap huruf dalam plaintext diganti dengan huruf lain sesuai pola tertentu, sedangkan pada transposisi, posisi huruf-hurufnya diubah tanpa mengubah identitas huruf itu sendiri. Walau sederhana, cipher klasik menjadi dasar bagi pengembangan sistem kriptografi modern.
+- Aritmetika Modular
+  Aritmetika modular adalah sistem perhitungan yang hanya mempertimbangkan sisa hasil pembagian suatu bilangan terhadap bilangan tertentu yang disebut modulus. Jika dua bilangan memiliki sisa pembagian yang sama terhadap suatu modulus n, maka keduanya dikatakan kongruen: a≡b(modn). Konsep ini menjadi dasar semua operasi dalam kriptografi modern, seperti enkripsi, dekripsi, dan tanda tangan digital.
 
-Selain itu, konsep aritmetika modular memainkan peran penting dalam kriptografi, khususnya pada algoritma modern seperti RSA dan Diffie-Hellman. Aritmetika modular adalah sistem operasi matematika yang bekerja dalam “lingkaran” nilai tertentu (modulus n), di mana hasil operasi selalu diambil sisa baginya terhadap n. Contohnya, 7+5≡0(mod12). Konsep ini memungkinkan pembentukan operasi yang sulit dibalik tanpa kunci tertentu, yang menjadi dasar keamanan algoritma kunci publik.
+- GCD (Greatest Common Divisor)
+  GCD atau faktor persekutuan terbesar adalah bilangan bulat positif terbesar yang dapat membagi dua bilangan tanpa sisa. Misalnya, GCD(12, 8) = 4. Dalam kriptografi, GCD digunakan untuk memastikan dua bilangan saling relatif prima (tidak memiliki faktor persekutuan selain 1), seperti dalam proses pembentukan kunci RSA, agar invers modular dapat dihitung.
 
-Konsep logaritma diskrit juga berperan penting dalam keamanan sistem kriptografi modern. Logaritma diskrit adalah permasalahan mencari eksponen 
-x pada persamaan ax≡b(mod n), yang sangat sulit diselesaikan ketika n besar. Kesulitan inilah yang digunakan sebagai dasar keamanan pada protokol seperti Diffie-Hellman Key Exchange dan ElGamal Encryption.
+- Bilangan Prima
+  Bilangan prima adalah bilangan bulat yang hanya memiliki dua faktor, yaitu 1 dan dirinya sendiri, misalnya 2, 3, 5, 7, dan seterusnya. Dalam kriptografi, bilangan prima digunakan untuk membangun struktur matematika yang sulit dipecahkan, misalnya dalam algoritma RSA yang memanfaatkan hasil kali dua bilangan prima besar sebagai modulus untuk menjaga keamanan data.
+
+- Logaritma Diskrit
+  Logaritma diskrit adalah masalah matematika yang berkaitan dengan mencari eksponen x dalam persamaan y=gx mod p, di mana g, p, dan y diketahui. Meskipun operasi perpangkatan modular mudah dilakukan, mencari nilai x dari hasilnya sangat sulit untuk modulus besar. Kesulitan inilah yang menjadi dasar keamanan algoritma seperti Diffie–Hellman dan ElGamal.
 
 ---
 
