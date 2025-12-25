@@ -122,7 +122,7 @@ membuat tanda tangan tersebut.
 Certificate Authority berperan sebagai pihak terpercaya yang mengeluarkan
 sertifikat digital untuk mengaitkan identitas pengguna dengan public key.
 Hal ini mencegah pemalsuan identitas dalam sistem tanda tangan digital.
----
+
 
 ## 8. Kesimpulan
 Tanda tangan digital RSA merupakan metode yang efektif untuk menjamin
