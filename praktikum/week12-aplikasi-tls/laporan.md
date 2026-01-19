@@ -27,67 +27,46 @@ Aplikasi TLS sangat luas dan mencakup berbagai layanan dan protokol jaringan, an
 ---
 
 ## 3. Alat dan Bahan
-- Python 3.x 
-- Web browser untuk menguji koneksi HTTPS
-- OpenSSL / sertifikat TLS
+- Git dan Akun GitHub
 - VS Code
 ---
 
 ## 4. Langkah Percobaan
-1. Membuat server sederhana yang menggunakan TLS (menggunakan Python + OpenSSL).
-2. Membuat sertifikat TLS menggunakan openssl untuk server.
-3. Mengonfigurasi server agar menerima koneksi TLS.
-4. Mengakses server melalui browser atau klien TLS lain untuk melihat koneksi terenkripsi (HTTPS).
-5. Mencatat hasil koneksi dan validasi sertifikat.
+- Analisis SSL/TLS pada Email & Web
+- Studi Kasus E-commerce
+- Analisis Etika & Privasi
 
 ---
 
 ## 5. Source Code
-import ssl
-import socket
-
-context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-context.load_cert_chain(certfile="server.pem", keyfile="server.key")
-
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:
-    sock.bind(('127.0.0.1', 8443))
-    sock.listen(5)
-    print("TLS Server running on https://localhost:8443")
-
-    with context.wrap_socket(sock, server_side=True) as ssock:
-        conn, addr = ssock.accept()
-        print("Client connected:", addr)
-        conn.send(
-            b"HTTP/1.1 200 OK\r\n"
-            b"Content-Type: text/plain\r\n\r\n"
-            b"Hello, this connection is secured with TLS"
-        )
-        conn.close()
-
-
+-
 ---
 
 ## 6. Hasil dan Pembahasan
--
+a. E-commerce
+Platform seperti Tokopedia dan Shopee menggunakan HTTPS (TLS) untuk mengamankan login dan transaksi pembayaran. TLS melindungi data pengguna, menjaga integritas transaksi, serta memastikan keaslian server melalui sertifikat digital.
+
+b. Email
+TLS mengamankan jalur komunikasi email (SMTP, IMAP, POP3), sementara PGP atau S/MIME melindungi isi email secara end-to-end, sehingga keamanan komunikasi lebih optimal.
+
+Isu Etika & Privasi
+Enkripsi melindungi privasi pengguna, tetapi memunculkan dilema hukum terkait pengawasan. Tantangan utama adalah menyeimbangkan hak privasi dengan kepentingan keamanan publik.
 ---
 
 ## 7. Jawaban Pertanyaan
-- Pertanyaan 1: Apa fungsi utama TLS?
-Jawaban: TLS berfungsi untuk mengamankan komunikasi data dengan menyediakan enkripsi, autentikasi, dan integritas data antara client dan server.
-- Pertanyaan 2: Sebutkan contoh penerapan TLS dalam kehidupan sehari-hari.
-Jawaban: TLS digunakan pada HTTPS (website aman), email (SMTP/IMAP), VPN, API web, dan aplikasi pesan instan.
+1. HTTP tidak aman karena data dikirim plaintext, sedangkan HTTPS menggunakan TLS untuk enkripsi, integritas, dan autentikasi server.
+2. Sertifikat digital memastikan identitas server dan mencegah serangan man-in-the-middle.
+3. Kriptografi melindungi privasi, tetapi menimbulkan dilema antara keamanan publik dan hak individu.
+
 ---
 
 ## 8. Kesimpulan
--
+TLS merupakan komponen penting dalam keamanan email dan e-commerce. Selain aspek teknis, penerapannya harus mempertimbangkan etika, privasi, dan regulasi.
 
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+ - Stallings, W. (2017). Cryptography and Network Security, Bab 15.
 
 ---
 
