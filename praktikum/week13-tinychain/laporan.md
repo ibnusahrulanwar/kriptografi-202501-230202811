@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 13
-Topik: Tinycoin 
+Topik: Tinychain 
 Nama: Ibnu Sahrul Anwar
 NIM: 230202811
 Kelas: 5IKKA
@@ -38,56 +38,94 @@ Secara konseptual, TinyChain menunjukkan bahwa keamanan blockchain dibangun dari
 ---
 
 ## 5. Source Code
-1. Blok
-    import hashlib
-    import time
+import hashlib
+import time
 
-    class Block:
-    def __init__(self, index, previous_hash, data, timestamp=None):
+
+# =========================
+# KELAS BLOK
+# =========================
+class Block:
+    def __init__(self, index, data, previous_hash):
         self.index = index
-        self.timestamp = timestamp or time.time()
+        self.timestamp = time.time()
         self.data = data
         self.previous_hash = previous_hash
         self.nonce = 0
         self.hash = self.calculate_hash()
 
     def calculate_hash(self):
-        value = str(self.index) + str(self.timestamp) + str(self.data) + str(self.previous_hash) + str(self.nonce)
-        return hashlib.sha256(value.encode()).hexdigest()
+        block_string = (
+            str(self.index)
+            + str(self.timestamp)
+            + str(self.data)
+            + str(self.previous_hash)
+            + str(self.nonce)
+        )
+        return hashlib.sha256(block_string.encode()).hexdigest()
 
     def mine_block(self, difficulty):
-        while self.hash[:difficulty] != "0" * difficulty:
+        target = "0" * difficulty
+        while self.hash[:difficulty] != target:
             self.nonce += 1
             self.hash = self.calculate_hash()
-        print(f"Block mined: {self.hash}")
-2. Blockchain
-    class Blockchain:
-    def __init__(self):
+        print(f"Blok {self.index} berhasil ditambang: {self.hash}")
+
+
+# =========================
+# KELAS BLOCKCHAIN
+# =========================
+class TinyChain:
+    def __init__(self, difficulty=3):
         self.chain = [self.create_genesis_block()]
-        self.difficulty = 4
+        self.difficulty = difficulty
 
     def create_genesis_block(self):
-        return Block(0, "0", "Genesis Block")
+        return Block(0, "Genesis Block", "0")
 
     def get_latest_block(self):
         return self.chain[-1]
 
-    def add_block(self, new_block):
-        new_block.previous_hash = self.get_latest_block().hash
+    def add_block(self, data):
+        new_block = Block(
+            len(self.chain),
+            data,
+            self.get_latest_block().hash
+        )
+        print(f"Menambang blok {new_block.index}...")
         new_block.mine_block(self.difficulty)
         self.chain.append(new_block)
 
-        # Uji coba blockchain
-        my_chain = Blockchain()
-        print("Mining block 1...")
-        my_chain.add_block(Block(1, "", "Transaksi A → B: 10 Coin"))
+    def display_chain(self):
+        print("\n=== ISI BLOCKCHAIN ===")
+        for block in self.chain:
+            print(f"Index        : {block.index}")
+            print(f"Timestamp    : {block.timestamp}")
+            print(f"Data         : {block.data}")
+            print(f"Nonce        : {block.nonce}")
+            print(f"Hash         : {block.hash}")
+            print(f"Prev Hash    : {block.previous_hash}")
+            print("-" * 40)
 
-        print("Mining block 2...")
-        my_chain.add_block(Block(2, "", "Transaksi B → C: 5 Coin"))
+
+# =========================
+# EKSEKUSI PROGRAM
+# =========================
+if __name__ == "__main__":
+    print("TinyChain dijalankan...\n")
+
+    tinychain = TinyChain(difficulty=3)
+
+    tinychain.add_block("Transaksi A -> B : 10 BTC")
+    tinychain.add_block("Transaksi C -> D : 5 BTC")
+
+    tinychain.display_chain()
+
 ```
 
 ## 6. Hasil dan Pembahasan
 pada kode <Block> yang sebelum diubah,output tidak muncul karena metode mine_block() tidak pernah dipanggil. Class hanyalah blueprint; tanpa instansiasi dan pemanggilan metode, tidak ada proses yang berjalan dan tidak ada output yang dicetak.
+Hasil Output <img width="528" height="381" alt="Screenshot 2026-01-19 175518" src="https://github.com/user-attachments/assets/abf6d838-6d31-478b-8a62-b2f5c9ecd783" />
 
 ---
 
