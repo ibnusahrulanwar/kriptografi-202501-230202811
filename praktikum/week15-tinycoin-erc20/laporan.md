@@ -41,34 +41,39 @@ Meskipun mudah diimplementasikan keamanan TinyCoin ERC-20 sangat bergantung pada
 # 2. Membuat Akun Metamask dan mendownload add on nya
 
 # 3. Buka dan siapkan file `Donation.sol`untuk di simpan di dalam Remix IDE https://remix.ethereum.org 
-![Hasil Eksekusi](screenshots/remix1.png)
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix1" src="https://github.com/user-attachments/assets/b0ca2231-f328-4bb8-b5f0-31d4d066db48" />
+
 
 # 4. Masuk ke menu Solidity Compiler , lalu Compile and Run Script
-![Hasil Eksekusi](screenshots/remix2.png)
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix2" src="https://github.com/user-attachments/assets/8528d4e3-33b2-4307-afb3-114cdf5d8ad9" />
+
 
 # 5. Jika sudah membuat dan memiliki Metamask, langkah selanjutnya adalah ganti netwok di metamask menjadi Sepolia. Kemudian copy dan paste wallet addres ke dalam web ini https://sepolia-faucet.pk910.de/#/
-![Hasil Eksekusi](screenshots/ether.png)
-![Hasil Eksekusi](screenshots/mining1.png)
-![Hasil Eksekusi](screenshots/mining2.png)
-![Hasil Eksekusi](screenshots/mining3.png)
+![Hasil Eksekusi]<img width="1920" height="262" alt="ether" src="https://github.com/user-attachments/assets/82544326-03cf-4c4a-af10-95baaca08611" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="mining1" src="https://github.com/user-attachments/assets/e18e0577-5515-4102-b69e-38df87fe900b" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="mining2" src="https://github.com/user-attachments/assets/2319c19b-4e47-46dc-a82c-892281c33620" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="mining3" src="https://github.com/user-attachments/assets/8619d8b0-82be-49ea-9f90-0e8d6a0f347c" />
+
 
 # Lalu Start Mining, tunggu sampai koin melebihi minimum atau maximum claim
 
 # 6. Langkah selanjutnya kembali ke Remix IDE untuk pengaturan Donate dan membuat smartcontract, Pilih Inject Provide- Metamask di dalam Environment dan Masukkan Wallet Addres Sepolia (otomatis mendeteksi account) , pastikan masih value 0 dan wei.
-![Hasil Eksekusi](screenshots/remix4.png)
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix4" src="https://github.com/user-attachments/assets/49b0754d-99c9-4cb9-b4d9-bf561892081f" />
 
 # Setelah konfirmasi akan muncul view code smartcontract
-![Hasil Eksekusi](screenshots/remix5.png)
+![Hasil Eksekusi]<img width="1405" height="378" alt="remix5" src="https://github.com/user-attachments/assets/1fe8c275-f52b-4f33-a7ae-8b707dfe5e8d" />
 
 # di bawahnya ganti wei menjadi gwei dan pilih berapa Value yang kita mau transaksikan..contoh: 1.000.000 gwei yang nantinya akan menjadi 0.001ETH 
-![Hasil Eksekusi](screenshots/remix6.png)
-![Hasil Eksekusi](screenshots/remix7.png)
+![Hasil Eksekusi]<img width="388" height="101" alt="remix6" src="https://github.com/user-attachments/assets/38e7e05b-ec9d-465c-ae8a-ffa2e41edb8b" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix7" src="https://github.com/user-attachments/assets/658fac2f-72af-4166-adda-05a154303342" />
 
 # 7. Buka link view etherscan yang muncul di terminal...Maka kita akan melihat transaksi keluar di Wallet Sepolia dan transaksi masuk di Balance Smartcontract yang tadi dibuat
-![Hasil Eksekusi](screenshots/remix8.png)
-![Hasil Eksekusi](screenshots/remix9.png)
-![Hasil Eksekusi](screenshots/remix10.png)
-![Hasil Eksekusi](screenshots/remix11.png)
+![Hasil Eksekusi]<img width="1359" height="131" alt="remix8" src="https://github.com/user-attachments/assets/6370aef1-bc63-408b-99bd-da85c4be9ade" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix9" src="https://github.com/user-attachments/assets/d53f769f-0a49-4828-aae2-edbc920b6802" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix10" src="https://github.com/user-attachments/assets/d26dd7e7-81fc-4e75-9da9-1fb02907377c" />
+![Hasil Eksekusi]<img width="1920" height="1080" alt="remix11" src="https://github.com/user-attachments/assets/a3111c3b-a97c-4054-a632-cdc6f68f3b41" />
+
+
 ---
 
 ## 5. Source Code
